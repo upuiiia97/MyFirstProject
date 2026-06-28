@@ -1,13 +1,15 @@
-print("Задание 2")
+X = int(input())  # минимальная сумма
+A = int(input())  # деньги Майкла
+B = int(input())  # деньги Ивана
 
-n = int(input("Введите пятизначное число: ")) #46275
 
-units = n % 10
-tens = (n // 10) % 10
-hundreds = (n // 100) % 10
-thousands = (n // 1000) % 10
-ten_thousands = n // 10000
-
-result = (tens ** units * hundreds) / (ten_thousands - thousands)
-
-print(f"Результат: {result}")
+if A >= X and B >= X:
+    print(2)
+elif A >= X:
+    print("Mike")
+elif B >= X:
+    print("Ivan")
+elif A + B >= X:
+    print(1)
+else:
+    print(0)
