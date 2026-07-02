@@ -47,7 +47,7 @@ for pet_name in pets.keys():
 
 
 #Задание 2
-
+print("Задание 2")
 
 my_dict = {}
 
