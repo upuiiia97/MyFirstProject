@@ -13,8 +13,8 @@ from clouds import Clouds
 CELL_TYPES = "🟩🌲🌊🏥🏦🔥"
 
 TREE_BONUS = 100
-UPGRADE_COST = 1000
-LIFE_COST = 500
+UPGRADE_COST = 5000
+LIFE_COST = 10000
 
 class Map:
     def __init__(self, w, h):
@@ -119,4 +119,10 @@ class Map:
             helico.lives -= 1  
             if (helico.lives == 0):
                 helico.game_over()
+
+    def export_data(self):
+        return {"cells": self.cells} 
+
+    def import_data(self, data):
+        self.cells = data["cells"] or [[0 for i in range(self.w)] for j in range(self.h)]        
      
